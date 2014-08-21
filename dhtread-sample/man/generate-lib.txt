@@ -1,0 +1,9 @@
+Refer to guide at http://jonisalonen.com/2012/calling-c-from-java-is-easy/
+
+javac ex/TTYUtil.java
+javah ex.TTYUtil
+
+Create ex_TTYUtil.c
+
+gcc -fPIC -c ex_TTYUtil.c -I $JAVA_HOME/include
+gcc ex_TTYUtil.o -shared -o libttyutil.so -Wl,-soname,ttyutil
