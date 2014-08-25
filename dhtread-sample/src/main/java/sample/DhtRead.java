@@ -6,4 +6,6 @@ public class DhtRead {
 	}
 
 	public static native int getTemperature();
+
+	public static native Reading getReading();
 }
