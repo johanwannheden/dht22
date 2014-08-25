@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_sample_DhtRead_getTemperature
   (JNIEnv *, jclass);
 
+/*
+ * Class:     sample_DhtRead
+ * Method:    getReading
+ * Signature: ()Lsample/Reading;
+ */
+JNIEXPORT jobject JNICALL Java_sample_DhtRead_getReading
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

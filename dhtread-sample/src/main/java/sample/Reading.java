@@ -7,6 +7,11 @@ public class Reading {
 	private float temperature;
 	private float humidity;
 
+    public Reading(final float temperature, final float humidity) {
+	this.temperature = temperature;
+	this.humidity = humidity;
+    }
+
 	public float getTemperature() {
 		return temperature;
 	}
