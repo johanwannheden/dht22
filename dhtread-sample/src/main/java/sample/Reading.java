@@ -1,5 +1,7 @@
 package sample;
 
+import java.text.MessageFormat;
+
 public class Reading {
 
 	private float temperature;
@@ -21,4 +23,8 @@ public class Reading {
 		this.humidity = humidity;
 	}
 
+	public String toString() {
+		return MessageFormat.format("Temperature: {0}, Humidity: {1}",
+				temperature, humidity);
+	}
 }
