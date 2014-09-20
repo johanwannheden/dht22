@@ -26,6 +26,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdio.h>
 
 #include "pi_mmio.h"
 
@@ -37,8 +38,13 @@ volatile uint32_t* pi_mmio_gpio = NULL;
 
 int pi_mmio_init(void) {
   if (pi_mmio_gpio == NULL) {
+    setegid(0);
+    seteuid(0);
+    setgid(0);
+    setuid(0);
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     if (fd == -1) {
+      printf("Error: no permission to open /dev/mem; setuid(getuid()): %d\n", getuid());
       // Error opening /dev/mem.  Probably not running as root.
       return MMIO_ERROR_DEVMEM;
     }
