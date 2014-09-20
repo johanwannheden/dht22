@@ -8,7 +8,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-bin/
+#bin/
 build/
 develop-eggs/
 dist/
@@ -39,7 +39,7 @@ coverage.xml
 
 # Mr Developer
 .mr.developer.cfg
-.project
+#.project
 .pydevproject
 
 # Rope
