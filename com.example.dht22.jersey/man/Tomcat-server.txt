@@ -1,0 +1,2 @@
+On the Raspi Tomcat server, the application is available at
+http://raspi:8080/build/rest/hello
