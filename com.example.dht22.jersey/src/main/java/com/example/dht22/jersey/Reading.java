@@ -1,12 +1,7 @@
 package com.example.dht22.jersey;
 
-import java.io.Serializable;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
-public class Reading implements Serializable {
-  private static final long serialVersionUID = 2089266539744829133L;
+public class Reading {
 
   private double temperature;
   private double humidity;
