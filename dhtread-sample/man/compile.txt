@@ -1,0 +1,1 @@
+javah -cp bin/ -d lib/ sample.DhtRead
