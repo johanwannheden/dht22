@@ -12,6 +12,7 @@ public class HelloWorldREST {
 
   @GET
   @Path("/{parameter}")
+  // http://localhost:8080/com.example.dht22.jersey/helloWorldREST/apa?value=gurka
   public Response responseMsg(@PathParam("parameter") String parameter,
       @DefaultValue("Nothing to say") @QueryParam("value") String value) {
 

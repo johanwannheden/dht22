@@ -12,10 +12,8 @@ public class ResourceService {
   @Path("/reading")
   @Produces(MediaType.APPLICATION_JSON)
   public Reading getReading() {
-    Reading reading = new Reading();
-    reading.setHumidity(55.5);
-    reading.setTemperature(25.4);
-    return reading;
+    Reading lastReading = new SqliteJdbc().getLastReading();
+    return lastReading;
   }
 
 }

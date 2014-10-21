@@ -7,11 +7,12 @@ import java.text.MessageFormat;
 
 public class ConnectionManager {
 
-  private static final String DEFAULT_LOCAL_PATH = "jdbc:sqlite:data/dht22.db";
+  private static final String DEFAULT_LOCAL_PATH = "jdbc:sqlite::resource:/dht22.db";
 
   public Connection getConnection() {
     try {
-      Class.forName("org.sqlite.JDBC");
+      Class<?> clazz = Class.forName("org.sqlite.JDBC");
+      assert clazz != null;
     } catch (ClassNotFoundException exception) {
       throw new AssertionError("SQLite not found on classpath", exception);
     }
