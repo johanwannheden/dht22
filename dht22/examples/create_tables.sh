@@ -1,6 +1,6 @@
 #!/bin/bash
-DDL='CREATE TABLE data (
+DDL="CREATE TABLE data (
 	temperature number not null,
 	humidity number not null,
-	timestamp timestamp default (datetime(current_timestamp, "localtime"));'
-sqlite3 ~/dht22.db "$DDL"
+	stamp date default (datetime(CURRENT_TIMESTAMP, 'localtime')));"
+sqlite3 $1.db "$DDL"
